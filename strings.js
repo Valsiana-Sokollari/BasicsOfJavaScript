@@ -280,3 +280,4 @@ console.log("Numri i herëve që substringa \"" + substring +
 //vleren decimale te versionit binar
 
 console.log(+"10"+ +"20");
+

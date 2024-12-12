@@ -111,9 +111,9 @@ while(start<middle){
 
 }
 if(isPalindrome){
-    console.log("Numri eshte nje palindrome")
+    console.log("Number is palindrome")
 }
 else{
-    console.log("Numri nuk eshte nje palindrome")
+    console.log("Number is not a palindrome")
 }
 

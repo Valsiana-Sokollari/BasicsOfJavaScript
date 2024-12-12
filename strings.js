@@ -1,28 +1,28 @@
-//Ush1 Shkruaj nje funksion ne JavaScript qe kontrollon nese inputi eshte nje string ose jo
+//Write a JavaScript function that checks whether the input is a string or not.
 
 let retrievedInput ="Hello";
 
 function isString(input){
     if(typeof input =="string" ){
-        return "Inputi i dhene eshte nje string";
+        return "Given input is a string";
     }
     else{
-        return "Inputi i dhene nuk eshte nje string";
+        return "Given input is not a string";
     }
 
 }
 
-console.log("Rezultati i funksionit isString: "+isString(retrievedInput));
+console.log("Result of function isString: "+isString(retrievedInput));
 
-//Ush2 Shkruaj nje funksion qe kontrollon nese stringu i dhene eshte bosh apo jo
+//Write a function that checks whether the given string is empty or not.
 
 function isBlank(string){
-    return string?"Stringa nuk eshte bosh":"Stringa eshte bosh";
+    return string?"String is not empty":"String is empty";
 }
 
-console.log("A eshte stringa e dhene bosh? "+isBlank(retrievedInput));
+console.log("Is the given string an empty string? "+isBlank(retrievedInput));
 
-//Ush3 Shkruaj nje funksion qe ndan stringen dhe e konverton ate ne nje vektor fjalesh
+//Write a function that splits the string and converts it into an array of words.
 
 let theStringToSplit = "My name is Valsiana.";
 
@@ -31,9 +31,9 @@ function splitTheString(string){
     return wordsOfString;
 }
 
-console.log("Fjalet qe fjalia "+ theStringToSplit+" permban jane: "+ splitTheString(theStringToSplit));
+console.log("Words that the phrase "+ theStringToSplit+"contains are "+ splitTheString(theStringToSplit));
 
-//Ush4 Shkruaj nje funksion JavaScript qe ekstrakton nje numer te caktuar karakteresh nga stringa
+//Write a JavaScript function that extracts a specified number of characters from a string.
 
 let originalString = "Hello from me";
 
@@ -45,9 +45,9 @@ function extractCharacters(string, number){
     return characters;
 }
 
-console.log("Karakteret e vecuara nga stringa origjinale '"+ originalString +"' jane: "+ extractCharacters(originalString,5));
+console.log("Characters taken from the original string '"+ originalString +"' are: "+ extractCharacters(originalString,5));
 
-//Ush5 Shkruaj nje funksion qe e kthen stringen ne nje forme te shkurtuar
+//Write a function that returns a string in a shortened form
 
 function abbreviate(string){
     if(string.length>0){
@@ -66,13 +66,13 @@ function abbreviate(string){
         return abbreviatedResult;
     }
 else{
-    return "Stringa eshte bosh"
+    return "String is empty"
 }
 }
 
-console.log("Versioni i shkurtuar i stringes: "+ originalString+ " eshte "+ abbreviate(originalString));
+console.log("Abbreviatd form of string "+ originalString+ " is "+ abbreviate(originalString));
 
-//Ush 6 Shkruaj nje funksion ne JavaScript qe fsheh adresen e email per te parandaluar aksesin e paautorizuar
+//Write a JavaScript function that hides the email address to prevent unauthorized access.
 
 let emailAdress = "svalsiana@gmail.com";
 
@@ -92,7 +92,7 @@ function hideEmail(emailAdress){
 
 console.log(hideEmail(emailAdress));
 
-//Ush7 Shkruaj nje funksion qe kapitalizon shkronjen e pare te cdo fjale ne string
+//Write a function that capitalizes the first letter of each word in a string.
 
 let lowerCaseString = "i am worthy";
  
@@ -111,12 +111,11 @@ function capitalize(string){
     return capitalizedString;
 }
 
-console.log("Stringa origjinale: "+ lowerCaseString);
-console.log("Stringa ku cdo germe e pare eshte kapitale: "+ capitalize(lowerCaseString));
+console.log("Original string: "+ lowerCaseString);
+console.log("String where the first letter is capitalized: "+ capitalize(lowerCaseString));
 
-//Ush 8 Shkruaj nje funksion ne JavaScript qe merr si parameter nje stringe qe permban edhe shkronja 
-//te vogla edhe te medha dhe konverton shkronjat e vogla ne te medha dhe ato te medha ne te vogla
-
+//Write a JavaScript function that takes as a parameter a string containing both lowercase and uppercase letters and 
+// converts lowercase letters to uppercase and uppercase letters to lowercase.
 originalString = "AbdFGhjkR";
 
 function invertCase(string){
@@ -132,9 +131,9 @@ function invertCase(string){
     return invertedString;
 }
 
-console.log("Versioni i invertuar i stringes: "+originalString+" eshte "+invertCase(originalString));
+console.log("Inverted version of string: "+originalString+" is "+invertCase(originalString));
 
-//Ush9 Shkruaj nje funksion qe e konverton nje stringe ne camelCase
+//Write a function that converts a string to camelCase
 
 originalString = "I am valuable no matter what"
 
@@ -157,10 +156,9 @@ function camelize(string){
     return camelizedVersion;
 }
 
-console.log("Versioni camelCase i stringut: "+ originalString+ " eshte: "+ camelize(originalString));
+console.log("camelCase version of string: "+ originalString+ " is: "+ camelize(originalString));
 
-//Ush10 Shkruaj nje funksion qe vendos nje stringe brenda nje stringu ne nje pozicion te caktuar. By default pozicioni eshte 1
-// Pyetje : Si ta kontrollojme nese nje argument mungon apo jo?
+//Write a function that inserts a string into a string at a specific position. By default the position is 1
 let mainString = "My name is Valsiana";
 let nestedString = "Sokollari";
 
@@ -173,15 +171,14 @@ function insertString(mainString,nestedString,pozition){
 
 }
 
-console.log("Stringa: "+mainString+" pas nderthurjes me "+nestedString+" eshte "+ insertString(mainString,nestedString,11));
+console.log("String: "+mainString+" after attaching the string: "+nestedString+" is"+ insertString(mainString,nestedString,11));
 
-//Ush11 Shkruaj nje funksion ne JavaScript qe formaton nje numer ne nje stringe te lexueshem nga syri njerezor
-//P.sh 1st 2nd 43rd
-//Rregulli numrat qe mbarojne me 1 marrin st
-//numrat qe mbarojne me 2 marrin nd
-//Numrat qe mbarojne me 3 marrin rd
-//Vec 11 12 dhe 13 bejne perjashtim pasi marrin th dhe gjithe numrat e tjere marrin th
-
+//Write a JavaScript function that formats a number into a human-readable string
+//E.g. 1st 2nd 43rd
+//Regularly numbers ending in 1 get st
+//numbers ending in 2 get nd
+//Numbers ending in 3 get rd
+//Except 11 12 and 13 are exceptions as they get th and all other numbers get th
 let number = 56;
 
 function formatNumber(number){
@@ -204,11 +201,11 @@ function formatNumber(number){
     return formattedNumber;
 }
 
-console.log("Numri: "+number+" i formatuar eshte: "+formatNumber(number));
+console.log("Number: "+number+" formatted is: "+formatNumber(number));
 
-//Ush12 Shkruaj nje funksion ne JS per te shkurtuar nje stringe nese eshte me e gjate 
-//se nje numer specifik karakteresh. Stringat e shkurtuara do te mbarojne me karakteret ...
-//by default por nese karakteri specifikohet do te mbaroje me ate karakter
+//Write a function in JS to truncate a string if it is longer
+//than a specific number of characters. The truncated strings will end with the characters ...
+//by default but if the character is specified it will end with that character
 
 let stringToTruncate ="I am learning JavaScript";
 
@@ -228,10 +225,9 @@ function truncateString(string,number,character){
 
 }
 
-console.log("Stringa e shkurtuar eshte: "+truncateString(stringToTruncate,5,"&"));
+console.log("Shortened string is: "+truncateString(stringToTruncate,5,"&"));
 
-//Ush13 Shkruaj nje funksion qe ndan nje stringe neper pjese me gjatesi te dhene. Nese gjatesia
-//nuk jepet stringa nuk ndahet ne nenpjese
+//Write a function that splits a string into parts of a given length. If the length is not given, the string is not split into parts.
 
 let stringToChunk = "I am writing some code in JS"
 
@@ -251,15 +247,15 @@ function chunkString(string,length){
 
 }
 
-console.log("Stringa e ndare eshte: "+ chunkString(stringToChunk,2));
+console.log("Splitted string is: "+ chunkString(stringToChunk,2));
 
-//Ush14 Shkruaj nje funksion ne JS qe numeron numrin e substringave ne nje stringe
+// Write a function in JS that counts the number of substrings in a string
 
 originalString="The quick brown fox jumps over the lazy dog"
 
 function countSubStrings(string, substring) {
     let count = 0;
-    let index = string.toLowerCase().indexOf(substring.toLowerCase()); // Kontroll për substring case-insensitive
+    let index = string.toLowerCase().indexOf(substring.toLowerCase()); // Control for substring case-insensitive
     while (index !== -1) {
         count++;
         index = string.toLowerCase().indexOf(substring.toLowerCase(), index + substring.length);
@@ -271,13 +267,7 @@ function countSubStrings(string, substring) {
 let 
 substring = "the";
 
-console.log("Numri i herëve që substringa \"" + substring + 
-            "\" shfaqet në stringun \"" + originalString + "\" është: " + 
+console.log("Number of times that substring \"" + substring + 
+            "\" is in on the main string: \"" + originalString + "\" is: " + 
             countSubStrings(originalString, substring));
-
-//Ush15 Shkruaj nje funksion qe merr si argument nje numer te plote pozitiv,
-//kthen mbrapsht prezantimin e ketij numri ne binar dhe perfundimisht kthen 
-//vleren decimale te versionit binar
-
-console.log(+"10"+ +"20");
 

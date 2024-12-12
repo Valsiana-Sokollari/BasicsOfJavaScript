@@ -90,22 +90,50 @@ while(sumUntil100<=100){
    countNumbersTill100++;
 }
    console.log(`${countNumbersTill100} numbers are read until their sum surpasses 100`)
-//Ush1
+/**
+ * Perform a test on a class of 30 students.
+At the end of each test, generate a grade for the student, and check his
+level.
+
+The levels are:
+
+- Excellent (average grade > 9)
+
+- Average (average grade [7-9])
+
+- Poor (average grade < 6)
+
+At the end of each test, a message will be printed:
+
+'Student [number] is a student of level [level].
+ */
 const STUDENTS=30;
 
 for(let i=1;i<=STUDENTS;i++){
     let nota = Math.floor(Math.random() * (10 - 4 + 1)) + 4;
     if(nota >9){
-        console.log("Nxenesi "+i+" eshte nje nxenes i nivelit Ekselent")
+        console.log("Student "+i+" is a student of excellent level")
     }
     else if(nota>7 && nota <9){
-        console.log("Nxenesi "+i+" eshte nje nxenes i nivelit Mesatar")
+        console.log("Student "+i+"is a student of average level ")
     }
     else
-        console.log("Nxenesi "+i+" eshte nje nxenes i nivelit te dobet")
+        console.log("Student "+i+" is a student of poor level")
 }
+/**
+ * Create the following figures for a given number of 'n' rows.
+Use loops.
+ */
 
-//Ush2
+/**
+ *  *
+    **
+    ***
+    ****
+    *****
+    ******
+
+ */
 let n =6
  for (let i=1;i<=n ;i++){
     let stars='';
@@ -114,13 +142,20 @@ let n =6
     }
     console.log(stars);
  }
-//Menyra 2
+//Alternative way
 for(let i=0;i<n;i++){
    let str='*'.repeat(i+1);
    console.log(str);
 }
  console.log();
- //Ush3
+
+ /**
+   ******
+   ****
+   ***
+   **
+   *
+  */
  n=5;
 
  for(let i=1;i<=n;i++){
@@ -131,14 +166,23 @@ for(let i=0;i<n;i++){
     console.log(stars)
  }
 
- //Menyra 2
+ //Alternative way
  for(let i=0 ;i<n;i++){
    let str='*'.repeat(n-i);
    console.log(str);
  }
 
 console.log();
-//Ush4
+
+/**
+ * 
+ *  *
+   ***
+  *****
+ *******
+*********
+
+ */
 n=5
 for(let i=1;i<=n;i++){
     let string ='';
@@ -154,13 +198,25 @@ for(let i=1;i<=n;i++){
 }
 console.log();
 n=5
-//Menyra 2
+//Alternative way
 for(let i=0;i<n;i++){
    let str =' '.repeat(n-i-1) + "*".repeat(2*i+1);
    console.log(str)
 }
-//Ush5
-console.log("Rombi")
+
+/**
+ *  *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+ */
+console.log("Rhombus")
 let numberOfRows=5;
 let result='';
  for(let actualRow =1;actualRow<numberOfRows;actualRow++){
@@ -172,12 +228,16 @@ let result='';
 
 console.log(result);
 
-//Menyra 2
-for(let i=0;i<numberOfRows;i++){
-   let str = ' '.repeat(numberOfRows)
-}
+/**
+ * 
+*****
+*   *
+*   *
+*   *
+*****
 
-//Ush 6
+ * 
+ */
 n=5
 for(let i=1;i<=n;i++){
    let string='';
@@ -199,7 +259,7 @@ for(let i=1;i<=n;i++){
    console.log(string);
 }
 
-//Menyra 2
+//Alternative way
 for(let i=0;i<n;i++){
    let str='';
    if(i==0||i==n-1){
@@ -211,8 +271,19 @@ for(let i=0;i<n;i++){
    console.log(str)
 }
 
-//Ush 7
-console.log("Romb i zbrazet")
+/**
+ *  *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
+
+ */
+console.log("Empty rhombus")
 for (let i = 1; i <= n; i++) {
    let spacesOutside = " ".repeat(n - i);
    let spacesInside = i === 1 ? "" : " ".repeat(2 * i - 3);

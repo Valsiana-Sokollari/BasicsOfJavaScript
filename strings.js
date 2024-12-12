@@ -268,8 +268,15 @@ function countSubStrings(string, substring) {
 }
 
 
-const substring = "the";
+let 
+substring = "the";
 
 console.log("Numri i herëve që substringa \"" + substring + 
             "\" shfaqet në stringun \"" + originalString + "\" është: " + 
             countSubStrings(originalString, substring));
+
+//Ush15 Shkruaj nje funksion qe merr si argument nje numer te plote pozitiv,
+//kthen mbrapsht prezantimin e ketij numri ne binar dhe perfundimisht kthen 
+//vleren decimale te versionit binar
+
+console.log(+"10"+ +"20");
